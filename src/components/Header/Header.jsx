@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Navbar, Col } from "react-bootstrap";
 import SearchBox from "./SearchBox";
 import StarRating from "./StarRating";
@@ -14,7 +15,6 @@ const Header = (props) => {
           height="50"
           alt="CinemApp logo"
           style={{ marginLeft: 30, cursor: "pointer" }}
-          onClick={() => setSearchValue("")}
         />
       </Col>
       <Col xs={8} lg={3} className="star-rating d-flex justify-content-end" >
