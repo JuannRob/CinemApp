@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchBox = ({searchValue, setSearchValue}) => {
+const SearchBox = ({ searchValue, setSearchValue }) => {
   return (
     <>
       <input
@@ -11,6 +11,6 @@ const SearchBox = ({searchValue, setSearchValue}) => {
       ></input>
     </>
   );
-}
+};
 
 export default SearchBox;

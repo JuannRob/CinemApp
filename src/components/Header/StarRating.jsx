@@ -6,7 +6,7 @@ const StarRating = ({ activeStar, setActiveStar, setSearchValue }) => {
 
   const handleClick = (index) => {
     setSearchValue("");
-    
+
     if (index === lastClicked) {
       setActiveStar(0);
       setLastClicked(0);
@@ -14,7 +14,6 @@ const StarRating = ({ activeStar, setActiveStar, setSearchValue }) => {
       setLastClicked(index);
       setActiveStar(index);
     }
-    console.log("index:", index);
   };
 
   return (

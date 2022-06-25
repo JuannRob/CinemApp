@@ -14,7 +14,6 @@ const App = () => {
 
   useEffect(() => {
     discoverMovies().then((data) => setMovies(data.results));
-
     if (searchValue.length > 0) setActiveStar(0);
   }, [searchValue]);
 
@@ -35,7 +34,10 @@ const App = () => {
         setActiveStar={setActiveStar}
       />
       <Routes>
-        <Route path="/" element={<MoviesList movies={movies} setMovie={setMovie}/>}/>
+        <Route
+          path="/"
+          element={<MoviesList movies={movies} setMovie={setMovie} />}
+        />
         <Route path="/movie" element={<MovieDetails movie={movie} />} />
       </Routes>
     </>
