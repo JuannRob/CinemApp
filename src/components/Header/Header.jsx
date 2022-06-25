@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Navbar, Col } from "react-bootstrap";
 import SearchBox from "./SearchBox";
@@ -8,7 +8,6 @@ const Header = (props) => {
   const { searchValue, setSearchValue, activeStar, setActiveStar } = props;
 
   const location = useLocation();
-  console.log(location.pathname);
 
   return (
     <Navbar bg="dark">
