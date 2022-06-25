@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #e0e0e0;
+  color: #1d1d1d;
+}
+.best-movies {
+  text-align: right; 
+  font-size: 3ch;
+  margin-right: 1rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie {
+  transition: transform 500ms;
+  margin-bottom: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie:hover {
+  transform: scale(1.4);
+  z-index: 1;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie img {
+  max-width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+
+.movie .tiptext {
+  visibility: hidden;
+  height: 40px;
+  width: 40px;
+  background-color: #a072b2;
+  color: #fff;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 100%;
+  border: 2px solid white;
+  position: absolute;
+  right: 85%;
+  bottom: 90%;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.movie:hover .tiptext {
+  visibility: visible;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.movie-container {
+  margin-top: 5rem;
+}
+
+.logo {
+  margin-left: 3rem !important;
+}
+
+.search-box{
+  margin-left: 1rem;
+}
+
+@media (width < 576px) {
+  
+  .logo {
+    margin-left: -1.5rem !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .search-box {
+    margin-left: 0.5rem;
+  }
+
+  .star-rating {
+    margin-left: 0.5rem;
+  }
+
+  .movie:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+
+  .movie .tiptext {
+    right: 40%;
   }
 }
+
+.on {
+  color: #ffc107;
+}
+.off {
+  color: #e4e5e9;
+}
+
