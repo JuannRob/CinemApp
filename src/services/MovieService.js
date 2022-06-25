@@ -1,4 +1,4 @@
-const API_KEY = "c397bd049987f53d05362ade7e2852e6"; //apikey no debería subirse
+const API_KEY = ""; //ingresar ApiKey
 const BASE_URL = "https://api.themoviedb.org/3";
 
 export async function discoverMovies(rating) {
@@ -27,6 +27,18 @@ export async function searchMovies(query) {
   try {
     const res = await fetch(
       `${BASE_URL}/search/movie?api_key=${API_KEY}&query=${query}&language=es-MX&page=1`
+    );
+    const jsonData = await res.json();
+    return jsonData;
+  } catch (err) {
+    return console.log("Hubo un error:", err);
+  }
+}
+
+export async function getGenre() {
+  try {
+    const res = await fetch(
+      `${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=es-MX`
     );
     const jsonData = await res.json();
     return jsonData;

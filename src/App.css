@@ -47,6 +47,10 @@ body {
   visibility: visible;
 }
 
+.movie-container {
+  margin-top: 5rem;
+}
+
 .logo {
   margin-left: 3rem !important;
 }
