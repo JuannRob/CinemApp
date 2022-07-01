@@ -34,15 +34,3 @@ export async function searchMovies(query) {
     return console.log("Hubo un error:", err);
   }
 }
-
-export async function getGenre() {
-  try {
-    const res = await fetch(
-      `${BASE_URL}/genre/movie/list?api_key=${API_KEY}&language=es-MX`
-    );
-    const jsonData = await res.json();
-    return jsonData;
-  } catch (err) {
-    return console.log("Hubo un error:", err);
-  }
-}
